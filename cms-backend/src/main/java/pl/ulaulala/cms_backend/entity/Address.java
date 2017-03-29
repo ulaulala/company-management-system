@@ -10,9 +10,9 @@ public class Address {
     @Id
     @Column(name = "address_id")
     private Integer id;
-    private String street;
-    private Integer streetNumber;
-    private String postcode;
+    private String home;
+    private Integer flat;
+    private String postal_code;
     private String city;
 
     public Integer getId() {
@@ -23,28 +23,28 @@ public class Address {
         this.id = id;
     }
 
-    public String getStreet() {
-        return street;
+    public String getHome() {
+        return home;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public void setHome(String home) {
+        this.home = home;
     }
 
-    public Integer getStreetNumber() {
-        return streetNumber;
+    public Integer getFlat() {
+        return flat;
     }
 
-    public void setStreetNumber(Integer streetNumber) {
-        this.streetNumber = streetNumber;
+    public void setFlat(Integer flat) {
+        this.flat = flat;
     }
 
-    public String getPostcode() {
-        return postcode;
+    public String getPostal_code() {
+        return postal_code;
     }
 
-    public void setPostcode(String postcode) {
-        this.postcode = postcode;
+    public void setPostal_code(String postal_code) {
+        this.postal_code = postal_code;
     }
 
     public String getCity() {

@@ -14,8 +14,8 @@ public class Contract {
     private Integer personId;
     private String jobTitle;
     private Integer salary;
-    private Date startContract;
-    private Date endContract;
+    private Date startDate;
+    private Date endDate;
 
     public Integer getId() {
         return id;
@@ -49,20 +49,20 @@ public class Contract {
         this.salary = salary;
     }
 
-    public Date getStartContract() {
-        return startContract;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setStartContract(Date startContract) {
-        this.startContract = startContract;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Date getEndContract() {
-        return endContract;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setEndContract(Date endContract) {
-        this.endContract = endContract;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 }
 

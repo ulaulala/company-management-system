@@ -14,8 +14,8 @@ public class Project {
     private String title;
     private String principal;
     private Integer price;
-    private Date startProject;
-    private Date endProject;
+    private Date startDate;
+    private Date endDate;
 
     public Integer getId() {
         return id;
@@ -49,19 +49,19 @@ public class Project {
         this.price = price;
     }
 
-    public Date getStartProject() {
-        return startProject;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setStartProject(Date startProject) {
-        this.startProject = startProject;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Date getEndProject() {
-        return endProject;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setEndProject(Date endProject) {
-        this.endProject = endProject;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 }
