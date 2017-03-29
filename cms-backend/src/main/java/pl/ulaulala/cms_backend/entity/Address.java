@@ -5,18 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Addresses {
+public class Address {
 
     @Id
-    @Column(name="IDaddress")
+    @Column(name = "address_id")
     private Integer id;
-
     private String street;
-
     private Integer streetNumber;
-
     private String postcode;
-
     private String city;
 
     public Integer getId() {
@@ -58,8 +54,6 @@ public class Addresses {
     public void setCity(String city) {
         this.city = city;
     }
-
-
 }
 
 
