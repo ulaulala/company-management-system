@@ -12,7 +12,7 @@ public class Address {
     private Integer id;
     private String home;
     private Integer flat;
-    private String postal_code;
+    private String postalCode;
     private String city;
 
     public Integer getId() {
@@ -39,12 +39,12 @@ public class Address {
         this.flat = flat;
     }
 
-    public String getPostal_code() {
-        return postal_code;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setPostal_code(String postal_code) {
-        this.postal_code = postal_code;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String getCity() {
