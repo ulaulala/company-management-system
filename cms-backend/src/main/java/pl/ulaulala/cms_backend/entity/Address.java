@@ -1,14 +1,13 @@
 package pl.ulaulala.cms_backend.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Address {
 
     @Id
     @Column(name = "address_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String home;
     private Integer flat;

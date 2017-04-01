@@ -1,8 +1,6 @@
 package pl.ulaulala.cms_backend.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -10,6 +8,7 @@ public class Contract {
 
     @Id
     @Column(name = "contract_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Integer personId;
     private String jobTitle;
