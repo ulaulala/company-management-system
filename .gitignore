@@ -3,4 +3,5 @@
 target/
 cms-backend/target/
 cms-frontend/target/
+cms-frontend/node_modules/
 
