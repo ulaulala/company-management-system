@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+                   logicalFilePath="web-app-backend/changelog-data">
+
+    <changeSet author="ulaulala" id="insert-data-into-role" runOnChange="true">
+        <loadUpdateData
+                file="data/role.csv"
+                tableName="role"
+                primaryKey="role_id"
+                relativeToChangelogFile="true"
+                separator=";"
+                encoding="UTF-8"/>
+    </changeSet>
+
+    <changeSet author="ulaulala" id="insert-data-into-address" runOnChange="true">
+        <loadUpdateData
+                file="data/address.csv"
+                tableName="address"
+                primaryKey="address_id"
+                relativeToChangelogFile="true"
+                separator=";"
+                encoding="UTF-8"/>
+    </changeSet>
+
+    <changeSet author="ulaulala" id="insert-data-into-person" runOnChange="true">
+        <loadUpdateData
+                file="data/person.csv"
+                tableName="person"
+                primaryKey="person_id"
+                relativeToChangelogFile="true"
+                separator=";"
+                encoding="UTF-8"/>
+    </changeSet>
+
+    <changeSet author="ulaulala" id="insert-data-into-contract" runOnChange="true">
+        <loadUpdateData
+                file="data/contract.csv"
+                tableName="contract"
+                primaryKey="contract_id"
+                relativeToChangelogFile="true"
+                separator=";"
+                encoding="UTF-8"/>
+    </changeSet>
+
+    <changeSet author="ulaulala" id="insert-data-into-project" runOnChange="true">
+        <loadUpdateData
+                file="data/project.csv"
+                tableName="project"
+                primaryKey="project_id"
+                relativeToChangelogFile="true"
+                separator=";"
+                encoding="UTF-8"/>
+    </changeSet>
+
+    <changeSet author="ulaulala" id="insert-data-into-contractor" runOnChange="true">
+        <loadUpdateData
+                file="data/contractor.csv"
+                tableName="contractor"
+                primaryKey="project_id,person_id"
+                relativeToChangelogFile="true"
+                separator=";"
+                encoding="UTF-8"/>
+    </changeSet>
+
+</databaseChangeLog>
