@@ -2,6 +2,7 @@ package pl.ulaulala.cms_backend.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class Project {
@@ -15,6 +16,14 @@ public class Project {
     private Integer price;
     private Date startDate;
     private Date endDate;
+
+    @ManyToMany
+    @JoinTable(
+            name="contractor",
+            joinColumns = @JoinColumn(name = "project_id"),
+            inverseJoinColumns = @JoinColumn(name = "person_id")
+    )
+    private Set<Person> people;
 
     public Integer getId() {
         return id;
@@ -62,5 +71,13 @@ public class Project {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public Set<Person> getPeople() {
+        return people;
+    }
+
+    public void setPeople(Set<Person> people) {
+        this.people = people;
     }
 }

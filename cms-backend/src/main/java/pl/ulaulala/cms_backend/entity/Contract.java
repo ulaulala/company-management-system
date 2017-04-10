@@ -10,11 +10,15 @@ public class Contract {
     @Column(name = "contract_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Integer personId;
+
     private String jobTitle;
     private Integer salary;
     private Date startDate;
     private Date endDate;
+
+    @ManyToOne
+    @JoinColumn(name = "person_id")
+    private Contract contract;
 
     public Integer getId() {
         return id;
@@ -22,14 +26,6 @@ public class Contract {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getPersonId() {
-        return personId;
-    }
-
-    public void setPersonId(Integer personId) {
-        this.personId = personId;
     }
 
     public String getJobTitle() {
@@ -62,6 +58,14 @@ public class Contract {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public Contract getContract() {
+        return contract;
+    }
+
+    public void setContract(Contract contract) {
+        this.contract = contract;
     }
 }
 

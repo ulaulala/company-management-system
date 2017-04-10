@@ -2,6 +2,7 @@ package pl.ulaulala.cms_backend.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class Person {
@@ -10,11 +11,25 @@ public class Person {
     @Column(name = "person_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Integer addressId;
-    private Integer roleId;
     private String firstName;
     private String lastName;
     private Date birthday;
+
+    @ManyToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
+
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
+
+    @ManyToMany
+    @JoinTable(
+            name = "contractor",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "project_id")
+    )
+    private Set<Project> projects;
 
     public Integer getId() {
         return id;
@@ -22,22 +37,6 @@ public class Person {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(Integer addressId) {
-        this.addressId = addressId;
-    }
-
-    public Integer getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
     }
 
     public String getFirstName() {
@@ -62,5 +61,29 @@ public class Person {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Set<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
     }
 }

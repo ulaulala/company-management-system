@@ -3,24 +3,26 @@ package pl.ulaulala.cms_backend.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pl.ulaulala.cms_backend.dto.PersonData;
 import pl.ulaulala.cms_backend.entity.Person;
 import pl.ulaulala.cms_backend.repository.PersonRepository;
+import pl.ulaulala.cms_backend.service.PersonService;
 
 import java.util.List;
 
-@RestController("/person")
+@RestController("/people")
 public class PersonController {
 
-    private PersonRepository personRepository;
+    private PersonService personService;
 
     @Autowired
-    public PersonController(PersonRepository personRepository) {
-        this.personRepository = personRepository;
+    public PersonController(PersonService personService) {
+        this.personService = personService;
     }
 
-    @GetMapping("/person")
-    public List<Person> findAllPeople() {
-        return personRepository.findAll();
+    @GetMapping
+    public List<PersonData> findAllPeople() {
+        return personService.findAll();
     }
 }
 
