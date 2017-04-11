@@ -1,6 +1,7 @@
 package pl.ulaulala.cms_backend.dto;
 
 import java.util.Date;
+import java.util.Set;
 
 public class PersonData {
 
@@ -9,6 +10,7 @@ public class PersonData {
     private String lastName;
     private Date birthday;
     private AddressData address;
+    private Set<ProjectData> projects;
 
     public Integer getId() {
         return id;
@@ -48,5 +50,13 @@ public class PersonData {
 
     public void setAddress(AddressData address) {
         this.address = address;
+    }
+
+    public Set<ProjectData> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<ProjectData> projects) {
+        this.projects = projects;
     }
 }

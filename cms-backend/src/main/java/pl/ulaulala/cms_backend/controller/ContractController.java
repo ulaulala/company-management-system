@@ -3,23 +3,23 @@ package pl.ulaulala.cms_backend.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.ulaulala.cms_backend.entity.Contract;
-import pl.ulaulala.cms_backend.repository.ContractRepository;
+import pl.ulaulala.cms_backend.dto.ContractData;
+import pl.ulaulala.cms_backend.service.ContractService;
 
 import java.util.List;
 
-@RestController("/contract")
+@RestController
 public class ContractController {
 
-    private ContractRepository contractRepository;
+    private ContractService contractService;
 
     @Autowired
-    public ContractController(ContractRepository contractRepository) {
-        this.contractRepository = contractRepository;
+    public ContractController(ContractService contractService) {
+        this.contractService = contractService;
     }
 
-    @GetMapping("/contract")
-    public List<Contract> findAllContracts() {
-        return contractRepository.findAll();
+    @GetMapping("/contracts")
+    public List<ContractData> findAllContracts() {
+        return contractService.findAll();
     }
 }

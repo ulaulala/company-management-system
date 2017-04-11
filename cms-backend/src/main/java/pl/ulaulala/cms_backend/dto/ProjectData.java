@@ -1,15 +1,12 @@
-package pl.ulaulala.cms_backend.entity;
+package pl.ulaulala.cms_backend.dto;
 
-import javax.persistence.*;
+import pl.ulaulala.cms_backend.entity.Person;
+
 import java.util.Date;
 import java.util.Set;
 
-@Entity
-public class Project {
+public class ProjectData {
 
-    @Id
-    @Column(name = "project_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String title;
     private String principal;
@@ -17,13 +14,6 @@ public class Project {
     private Date startDate;
     private Date endDate;
     private String description;
-
-    @ManyToMany
-    @JoinTable(
-            name="contractor",
-            joinColumns = @JoinColumn(name = "project_id"),
-            inverseJoinColumns = @JoinColumn(name = "person_id")
-    )
     private Set<Person> people;
 
     public Integer getId() {
@@ -74,19 +64,19 @@ public class Project {
         this.endDate = endDate;
     }
 
-    public Set<Person> getPeople() {
-        return people;
-    }
-
-    public void setPeople(Set<Person> people) {
-        this.people = people;
-    }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Set<Person> getPeople() {
+        return people;
+    }
+
+    public void setPeople(Set<Person> people) {
+        this.people = people;
     }
 }

@@ -1,32 +1,14 @@
-package pl.ulaulala.cms_backend.entity;
+package pl.ulaulala.cms_backend.dto;
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-public class Contract {
-
-    @Id
-    @Column(name = "contract_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class ContractData {
 
     private String jobTitle;
     private Integer salary;
     private Date startDate;
     private Date endDate;
-
-    @ManyToOne
-    @JoinColumn(name = "person_id")
-    private Person person;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    private PersonData person;
 
     public String getJobTitle() {
         return jobTitle;
@@ -60,17 +42,11 @@ public class Contract {
         this.endDate = endDate;
     }
 
-    public Person getPerson() {
+    public PersonData getPerson() {
         return person;
     }
 
-    public void setPerson(Person person) {
+    public void setPerson(PersonData person) {
         this.person = person;
     }
 }
-
-
-
-
-
-

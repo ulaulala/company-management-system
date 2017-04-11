@@ -10,7 +10,7 @@ import pl.ulaulala.cms_backend.service.PersonService;
 
 import java.util.List;
 
-@RestController("/people")
+@RestController
 public class PersonController {
 
     private PersonService personService;
@@ -20,7 +20,7 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @GetMapping
+    @GetMapping("/people")
     public List<PersonData> findAllPeople() {
         return personService.findAll();
     }

@@ -25,5 +25,4 @@ public class PersonService {
         List<Person> people = personRepository.findAll();
         return personFactory.createList(people);
     }
-
 }

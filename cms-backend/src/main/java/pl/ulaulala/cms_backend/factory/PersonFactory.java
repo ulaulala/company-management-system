@@ -23,16 +23,16 @@ public class PersonFactory implements Factory<PersonData, Person> {
             return null;
         }
 
-        PersonData personData = new PersonData();
+        PersonData dto = new PersonData();
 
-        personData.setId(person.getId());
-        personData.setFirstName(person.getFirstName());
-        personData.setLastName(person.getLastName());
-        personData.setBirthday(person.getBirthday());
+        dto.setId(person.getId());
+        dto.setFirstName(person.getFirstName());
+        dto.setLastName(person.getLastName());
+        dto.setBirthday(person.getBirthday());
 
-        mapAddresses(personData, person.getAddress());
+        mapAddresses(dto, person.getAddress());
 
-        return personData;
+        return dto;
     }
 
     private void mapAddresses(PersonData personData, Address address) {
