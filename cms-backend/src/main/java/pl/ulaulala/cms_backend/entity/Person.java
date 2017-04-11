@@ -2,6 +2,7 @@ package pl.ulaulala.cms_backend.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity

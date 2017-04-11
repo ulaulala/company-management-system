@@ -14,7 +14,7 @@ public class ProjectData {
     private Date startDate;
     private Date endDate;
     private String description;
-    private Set<Person> people;
+    private Set<PersonData> people;
 
     public Integer getId() {
         return id;
@@ -72,11 +72,11 @@ public class ProjectData {
         this.description = description;
     }
 
-    public Set<Person> getPeople() {
+    public Set<PersonData> getPeople() {
         return people;
     }
 
-    public void setPeople(Set<Person> people) {
+    public void setPeople(Set<PersonData> people) {
         this.people = people;
     }
 }

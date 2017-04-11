@@ -2,6 +2,7 @@ package pl.ulaulala.cms_backend.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -18,11 +19,11 @@ public class Project {
     private Date endDate;
     private String description;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name="contractor",
-            joinColumns = @JoinColumn(name = "project_id"),
-            inverseJoinColumns = @JoinColumn(name = "person_id")
+            joinColumns = @JoinColumn(name = "project_id", referencedColumnName = "project_id"),
+            inverseJoinColumns = @JoinColumn(name = "person_id", referencedColumnName = "person_id")
     )
     private Set<Person> people;
 
