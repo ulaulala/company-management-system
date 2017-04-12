@@ -24,7 +24,7 @@ public class Person {
     @JoinColumn(name = "role_id")
     private Role role;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "contractor",
             joinColumns = @JoinColumn(name = "person_id"),

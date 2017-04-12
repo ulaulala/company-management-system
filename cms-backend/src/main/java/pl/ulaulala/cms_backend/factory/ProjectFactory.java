@@ -1,6 +1,7 @@
 package pl.ulaulala.cms_backend.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import pl.ulaulala.cms_backend.dto.PersonData;
 import pl.ulaulala.cms_backend.dto.ProjectData;
@@ -18,7 +19,7 @@ public class ProjectFactory  implements Factory<ProjectData, Project>{
     private PersonFactory personFactory;
 
     @Autowired
-    public ProjectFactory(PersonFactory personFactory) {
+    public ProjectFactory(@Lazy PersonFactory personFactory) {
         this.personFactory = personFactory;
     }
 
@@ -37,13 +38,13 @@ public class ProjectFactory  implements Factory<ProjectData, Project>{
         dto.setEndDate(project.getEndDate());
         dto.setDescription(project.getDescription());
 
-        mapPeople(dto, new ArrayList<Person>(project.getPeople()));
+        //mapPeople(dto, new ArrayList<Person>(project.getPeople()));
 
         return dto;
     }
 
-    private void mapPeople(ProjectData projectData, List<Person> person) {
-        List<PersonData> personData = personFactory.createList(person);
+    private void mapPeople(ProjectData projectData, List<Person> people) {
+        List<PersonData> personData = personFactory.createList(people);
         projectData.setPeople(new HashSet<PersonData>(personData));
     }
 }
