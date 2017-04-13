@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
 public class ProjectFactory  implements Factory<ProjectData, Project>{
@@ -38,7 +39,24 @@ public class ProjectFactory  implements Factory<ProjectData, Project>{
         dto.setEndDate(project.getEndDate());
         dto.setDescription(project.getDescription());
 
-        //mapPeople(dto, new ArrayList<Person>(project.getPeople()));
+        return dto;
+    }
+
+    public ProjectData createWithPeople(Project project) {
+        if(project == null) {
+            return null;
+        }
+
+        ProjectData dto = new ProjectData();
+
+        dto.setId(project.getId());
+        dto.setTitle(project.getTitle());
+        dto.setPrincipal(project.getPrincipal());
+        dto.setPrice(project.getPrice());
+        dto.setStartDate(project.getStartDate());
+        dto.setEndDate(project.getEndDate());
+        dto.setDescription(project.getDescription());
+        mapPeople(dto, new ArrayList<Person>(project.getPeople()));
 
         return dto;
     }
@@ -46,5 +64,11 @@ public class ProjectFactory  implements Factory<ProjectData, Project>{
     private void mapPeople(ProjectData projectData, List<Person> people) {
         List<PersonData> personData = personFactory.createList(people);
         projectData.setPeople(new HashSet<PersonData>(personData));
+    }
+
+    public List<ProjectData> createListWith(List<Project> entities) {
+        return entities.stream()
+                .map(this::createWithPeople)
+                .collect(Collectors.toList());
     }
 }

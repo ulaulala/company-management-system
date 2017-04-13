@@ -23,6 +23,6 @@ public class PersonService {
 
     public List<PersonData> findAll() {
         List<Person> people = personRepository.findAll();
-        return personFactory.createList(people);
+        return personFactory.createListWith(people);
     }
 }

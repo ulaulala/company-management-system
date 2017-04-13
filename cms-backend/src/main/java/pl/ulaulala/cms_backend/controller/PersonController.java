@@ -2,6 +2,7 @@ package pl.ulaulala.cms_backend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import pl.ulaulala.cms_backend.dto.PersonData;
 import pl.ulaulala.cms_backend.entity.Person;
@@ -24,5 +25,6 @@ public class PersonController {
     public List<PersonData> findAllPeople() {
         return personService.findAll();
     }
+
 }
 

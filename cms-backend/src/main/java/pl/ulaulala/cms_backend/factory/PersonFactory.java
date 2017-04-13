@@ -12,6 +12,7 @@ import pl.ulaulala.cms_backend.entity.Project;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class PersonFactory implements Factory<PersonData, Person> {
@@ -38,8 +39,23 @@ public class PersonFactory implements Factory<PersonData, Person> {
         dto.setLastName(person.getLastName());
         dto.setBirthday(person.getBirthday());
 
+        return dto;
+    }
+
+    public PersonData createAll(Person person) {
+        if(person == null){
+            return null;
+        }
+
+        PersonData dto = new PersonData();
+
+        dto.setId(person.getId());
+        dto.setFirstName(person.getFirstName());
+        dto.setLastName(person.getLastName());
+        dto.setBirthday(person.getBirthday());
         mapAddresses(dto, person.getAddress());
         mapProjects(dto, new ArrayList<Project>(person.getProjects()));
+        mapAddresses(dto, person.getAddress());
 
         return dto;
     }
@@ -52,5 +68,11 @@ public class PersonFactory implements Factory<PersonData, Person> {
     private void mapProjects(PersonData personData, List<Project> projects) {
         List<ProjectData> projectData = projectFactory.createList(projects);
         personData.setProjects(new HashSet<ProjectData>(projectData));
+    }
+
+    public List<PersonData> createListWith(List<Person> entities) {
+        return entities.stream()
+                .map(this::createAll)
+                .collect(Collectors.toList());
     }
 }

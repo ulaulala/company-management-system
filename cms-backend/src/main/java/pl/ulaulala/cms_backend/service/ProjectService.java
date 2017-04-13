@@ -25,4 +25,9 @@ public class ProjectService {
         List<Project> projects = projectRepository.findAll();
         return projectFactory.createList(projects);
     }
+
+    public List<ProjectData> findAllWith() {
+        List<Project> projects = projectRepository.findAll();
+        return projectFactory.createListWith(projects);
+    }
 }

@@ -25,4 +25,9 @@ public class ProjectController {
     public List<ProjectData> findAllProjects() {
         return projectService.findAll();
     }
+
+    @GetMapping("/teams")
+    public List<ProjectData> findAllTeams() {
+        return projectService.findAllWith();
+    }
 }
