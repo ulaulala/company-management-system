@@ -30,4 +30,9 @@ public class ProjectService {
         List<Project> projects = projectRepository.findAll();
         return projectFactory.createListWith(projects);
     }
+
+    public ProjectData findOne(int id) {
+        Project project = projectRepository.findOne(id);
+        return projectFactory.createWithPeople(project);
+    }
 }

@@ -24,19 +24,20 @@ public class ContractFactory implements Factory<ContractData, Contract>{
         }
 
         ContractData dto = new ContractData();
-
+        //dto.setId(contract.getId());
         dto.setJobTitle(contract.getJobTitle());
         dto.setSalary(contract.getSalary());
         dto.setStartDate(contract.getStartDate());
         dto.setEndDate(contract.getEndDate());
-
         mapPeople(dto, contract.getPerson());
 
         return dto;
     }
 
     private void mapPeople(ContractData contractData, Person person) {
-        PersonData personData = personFactory.create(person);
+        PersonData personData = personFactory.createAll(person);
         contractData.setPerson(personData);
     }
+
+
 }

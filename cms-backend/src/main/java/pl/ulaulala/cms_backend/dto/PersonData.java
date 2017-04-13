@@ -59,4 +59,5 @@ public class PersonData {
     public void setProjects(Set<ProjectData> projects) {
         this.projects = projects;
     }
+
 }

@@ -2,6 +2,7 @@ package pl.ulaulala.cms_backend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import pl.ulaulala.cms_backend.dto.ProjectData;
 import pl.ulaulala.cms_backend.entity.Project;
@@ -30,4 +31,11 @@ public class ProjectController {
     public List<ProjectData> findAllTeams() {
         return projectService.findAllWith();
     }
+
+    @GetMapping(value = "/teams/{id}")
+    public ProjectData findOne(@PathVariable int id) {
+        return projectService.findOne(id);
+    }
+
+
 }

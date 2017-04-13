@@ -25,4 +25,9 @@ public class PersonService {
         List<Person> people = personRepository.findAll();
         return personFactory.createListWith(people);
     }
+
+    public PersonData findOne(int id) {
+        Person person = personRepository.findOne(id);
+        return personFactory.createAll(person);
+    }
 }

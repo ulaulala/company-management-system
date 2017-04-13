@@ -26,5 +26,10 @@ public class PersonController {
         return personService.findAll();
     }
 
+    @GetMapping(value = "/people/{id}")
+    public PersonData findOne(@PathVariable int id) {
+        return personService.findOne(id);
+    }
+
 }
 
