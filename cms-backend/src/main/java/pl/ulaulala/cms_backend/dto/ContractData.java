@@ -4,20 +4,11 @@ import java.util.Date;
 
 public class ContractData {
 
-    private Integer id;
     private String jobTitle;
     private Integer salary;
     private Date startDate;
     private Date endDate;
     private PersonData person;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getJobTitle() {
         return jobTitle;

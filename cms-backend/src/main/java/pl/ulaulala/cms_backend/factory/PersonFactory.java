@@ -21,7 +21,6 @@ public class PersonFactory implements Factory<PersonData, Person> {
 
     private AddressFactory addressFactory;
     private ProjectFactory projectFactory;
-    private ContractFactory contractFactory;
 
     @Autowired
     public PersonFactory(AddressFactory addressFactory, ProjectFactory projectFactory) {
@@ -58,7 +57,6 @@ public class PersonFactory implements Factory<PersonData, Person> {
         dto.setBirthday(person.getBirthday());
         mapAddresses(dto, person.getAddress());
         mapProjects(dto, new ArrayList<Project>(person.getProjects()));
-        //mapContracts(dto, new ArrayList<Contract>(person.getContracts()));
 
         return dto;
     }
@@ -72,11 +70,6 @@ public class PersonFactory implements Factory<PersonData, Person> {
         List<ProjectData> projectData = projectFactory.createList(projects);
         personData.setProjects(new HashSet<ProjectData>(projectData));
     }
-
-//    private void mapContracts(PersonData personData, List<Contract> contracts) {
-//        List<ContractData> contractData = contractFactory.createList(contracts);
-//        personData.setContracts(new HashSet<ContractData>(contractData));
-//    }
 
     public List<PersonData> createListWith(List<Person> entities) {
         return entities.stream()

@@ -18,7 +18,6 @@ public class ContractService {
 
     private ContractRepository contractRepository;
     private ContractFactory contractFactory;
-    private ProjectRepository projectRepository;
 
     @Autowired
     public ContractService(ContractRepository contractRepository, ContractFactory contractFactory) {

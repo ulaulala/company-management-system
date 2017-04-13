@@ -11,7 +11,6 @@ import pl.ulaulala.cms_backend.entity.Project;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Component
@@ -42,7 +41,7 @@ public class ProjectFactory  implements Factory<ProjectData, Project>{
         return dto;
     }
 
-    public ProjectData createWithPeople(Project project) {
+    public ProjectData createWith(Project project) {
         if(project == null) {
             return null;
         }
@@ -68,7 +67,7 @@ public class ProjectFactory  implements Factory<ProjectData, Project>{
 
     public List<ProjectData> createListWith(List<Project> entities) {
         return entities.stream()
-                .map(this::createWithPeople)
+                .map(this::createWith)
                 .collect(Collectors.toList());
     }
 }

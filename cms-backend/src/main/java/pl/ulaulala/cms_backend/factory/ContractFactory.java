@@ -24,7 +24,6 @@ public class ContractFactory implements Factory<ContractData, Contract>{
         }
 
         ContractData dto = new ContractData();
-        //dto.setId(contract.getId());
         dto.setJobTitle(contract.getJobTitle());
         dto.setSalary(contract.getSalary());
         dto.setStartDate(contract.getStartDate());

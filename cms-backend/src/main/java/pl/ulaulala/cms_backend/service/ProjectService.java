@@ -33,6 +33,6 @@ public class ProjectService {
 
     public ProjectData findOne(int id) {
         Project project = projectRepository.findOne(id);
-        return projectFactory.createWithPeople(project);
+        return projectFactory.createWith(project);
     }
 }

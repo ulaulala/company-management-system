@@ -27,12 +27,12 @@ public class ProjectController {
         return projectService.findAll();
     }
 
-    @GetMapping("/teams")
+    @GetMapping("/projects/people")
     public List<ProjectData> findAllTeams() {
         return projectService.findAllWith();
     }
 
-    @GetMapping(value = "/teams/{id}")
+    @GetMapping(value = "/projects/{id}/people")
     public ProjectData findOne(@PathVariable int id) {
         return projectService.findOne(id);
     }
