@@ -1,0 +1,128 @@
+section {
+  height: 100vh;
+}
+
+.profile {
+  height: 87vh;;
+  width: inherit;
+  bottom: 0;
+  padding: 62.5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.data {
+  background-color: rgba(255, 255, 255, 1);
+  margin: 17.5px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgba(227, 235, 238, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row2, .col2 {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.row1 { height: 30.9vh; min-height: 279px;}
+.row2 { height: 39.8vh; min-height: 359px;}
+.col1 { width: 24.3vw; min-width: 360px;}
+.col2 { width: 42.2vw; min-width: 360px;}
+
+.user-logo {
+  border-radius: 50%;
+  height: 87px;
+  width: 87px;
+  margin: 0 25px;
+  background-color: rgba(222, 68, 101, 1);
+  margin: 10px ;
+}
+.full-name {
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(16, 18, 29, 1);
+  margin: 10px ;
+}
+.full-job-title {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(214, 66, 99, 1);
+  margin: 1px ;
+}
+.full-date {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(85, 88, 112, 1);
+  margin: 1px ;
+}
+
+.profile-title {
+  font-weight: 700;
+  font-size: 22px;
+  color: rgba(226, 231, 232, 1);
+  text-transform: uppercase;
+  margin: 35px 42px;
+}
+.profile-subtitle {
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(145, 145, 145, 1);
+  text-transform: uppercase;
+  margin: 4px 42px 1px 42px;
+}
+.profile-content, .project-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(44, 46, 62, 1);
+  margin: 1px 42px 28px 42px;
+}
+.money {
+  font-weight: 500;
+  font-size: 30px;
+  color: rgba(16, 18, 29, 1);
+  margin: 0 42px;
+}
+.money-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(145, 145, 145, 1);
+  margin: 0 42px 24px 42px;
+}
+.project {
+  height: 90px;
+  width: auto;
+  border: 2px solid rgba(226, 231, 232, 1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 6px 42px;
+  align-self: stretch;
+  padding-left: 5px;
+}
+.table-icon {
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  margin: 0 25px;
+  background-color: rgba(222, 68, 101, 1);
+}
+.project-title { margin: 0;}
+.project-principal {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(214, 66, 99, 1);
+}
+
+
+@media (max-width: 1300px) {
+  .right-side {
+    width: calc(100vw - 260px);
+  }
+  .col1, .col2 {
+    width: calc(79.7vw - 260px);
+  }
+}

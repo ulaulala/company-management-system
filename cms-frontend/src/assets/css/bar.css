@@ -1,0 +1,125 @@
+aside {
+  width: 20.3vw;
+  min-width: 260px;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  background-color: rgba(29, 31, 49, 1);
+  overflow-y: scroll;
+}
+a.menu-listing:hover {
+  background-color: rgba(214, 66, 99, 1);
+  color: rgba(255, 255, 255, 1);
+}
+a.menu-listing:hover .icon .material-icons, a.menu-listing.hover .icon .material-icons,
+a.menu-listing:hover .dropdown-icon, a.menu-listing.hover .dropdown-icon {
+  background-color: rgba(214, 66, 99, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+  width: inherit;
+  min-width: 260px;
+  background-color: rgba(16, 18, 29, 1);
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 21px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+}
+.logo > img {
+  height: 28px;
+  width: 14px;
+  margin: 0 20px 0 40px;
+}
+section {
+  position: fixed;
+  height: calc(100vh - 70px);
+  bottom: 0;
+  background-color: rgba(245, 248, 249, 1);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  height: 108px;
+  width: inherit;
+  min-width: 260px;
+  border-bottom: solid 2px rgba(41, 44, 61, 1);
+}
+.user .user-main-logo {
+  background-color: rgba(85, 88, 112, 1);
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  margin: 0 25px;
+}
+.active-user-name {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  padding-right: 5px;
+}
+.active-user-job-title {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(130, 134, 161, 1);
+  margin-top: 4px;
+}
+.menu-listing {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(124, 128, 155, 1);
+}
+.icon {
+  height: 60px;
+  width: 60px;
+  margin: 0 25px;
+}
+.icon .material-icons, .logo .material-icons {
+  font-size: 50px;
+  text-align: center;
+  padding: 5px 0 0 5px;
+  color: rgba(214, 66, 99, 1);
+}
+.dropdown-icon {
+  color:  rgba(124, 128, 155, 1);
+  height: 20px;
+  width: 20px;
+  margin: 0 25px;
+  position: absolute;
+  right: 0;
+}
+.reports > a {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: rgba(22, 25, 42, 1);
+  color: rgba(124, 128, 155, 1);
+}
+.reports a .icon {
+  background-color: rgba(22, 25, 42, 1);
+  height: 41px;
+  width: 5px;
+  border-radius: 0;
+  margin: 0 33px 0 0  ;
+}
+.reports a:hover, .reports a.hover{
+    color: rgba(255, 255, 255, 1);
+}
+.reports a:hover .icon, .reports a.hover .icon {
+  background-color: rgba(214, 66, 99, 1);
+}
+.reports { display: none; z-index: 1;}
+.reports:hover, .reports.hover, a.menu-listing:hover + .reports, a.menu-listing.hover + .reports{
+  display: block;
+}

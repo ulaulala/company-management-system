@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Contract } from '../model/contract.model';
+import {Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/map'
-import {Person} from "../model/person.model";
 
 @Injectable()
-export class UsersService {
+export class ContractsService {
 
   constructor(private http: Http) {
   }
 
-  findAllPeople(): Observable<Array<Person>> {
-    return this.http.get('/api/people')
+  findAllContracts(): Observable<Array<Contract>> {
+    return this.http.get('/api/contracts')
       .map((response: Response) => response.json())
-      .map((data: Array<Person>) => {
+      .map((data: Array<Contract>) => {
         return data;
       });
   }

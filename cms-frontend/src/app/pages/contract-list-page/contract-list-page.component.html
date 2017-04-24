@@ -1,0 +1,24 @@
+<table class="report-table">
+  <tr>
+    <th></th>
+    <th>Imię i nazwisko</th>
+    <th>Wynagrodzenie</th>
+    <th>Od</th>
+    <th>Do</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let contract of contracts">
+    <td>
+      <div class="table-icon"></div>
+    </td>
+    <td>{{contract.person.firstName}} {{contract.person.lastName}}</td>
+    <td>{{contract.salary}} zł</td>
+    <td>{{contract.startDate | date:'d-M-y' }}</td>
+    <td>{{contract.endDate | date:'d-M-y' }}</td>
+    <td>
+      <div class="details"><i class="material-icons">content_paste</i></div>
+      Zobacz raport
+    </td>
+  </tr>
+
+</table>

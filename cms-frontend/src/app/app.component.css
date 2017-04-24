@@ -1,0 +1,54 @@
+@import url("../assets/css/bar.css");
+@import url("../assets/css/reports-style.css");
+@import url("http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+
+body {
+  font-family: 'Roboto';
+  outline: none;
+  position: fixed;
+  height: 100vh;
+  min-height: 700px;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.top-bar {
+  height: 70px;
+}
+.right-side {
+  position: fixed;
+  width: 79.7vw;
+  right: 0;
+  min-height: 250px;
+}
+@media (max-width: 1300px) {
+  .right-side {
+    width: calc(100vw - 260px);
+  }
+}
+
+header {
+  height: 70px;
+  position: absolute;
+  background-color: rgba(254, 254, 254, 1);
+}
+
+nav {
+  height: inherit;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 3.2%;
+  color: rgba(171, 182, 186, 1);
+  text-transform: uppercase;
+}
+nav .tab:nth-child(1) {
+  color: rgba(29, 31, 49, 1);
+  border-bottom: solid 3px rgba(214, 66, 99, 1);
+  font-weight: 500;
+}
+.tab {
+  float: left;
+  padding: calc(80px * 0.345) 15px calc(80px * 0.265) 15px;
+  margin: 0 2%;
+}
