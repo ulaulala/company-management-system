@@ -1,3 +1,4 @@
+///<reference path="pages/address-data-list-page/address-data-list-page.component.ts"/>
 import {Routes} from "@angular/router";
 import {UserProfilePageComponent} from "./pages/user-profile-page/user-profile-page.component";
 import {TeamListPageComponent} from "./pages/team-list-page/team-list-page.component";

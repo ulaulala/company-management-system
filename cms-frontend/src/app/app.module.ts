@@ -11,6 +11,8 @@ import {AddressDataListPageComponent} from "./pages/address-data-list-page/addre
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./app.routes";
 import {ContractsService} from "./commons/service/contracts.service";
+import {AddressesService} from "./commons/service/addresses.service";
+import {PeopleService} from "./commons/service/people.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import {ContractsService} from "./commons/service/contracts.service";
     UserProfilePageComponent,
     TeamListPageComponent,
     ContractListPageComponent,
-    AddressDataListPageComponent,
+    AddressDataListPageComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -27,7 +29,9 @@ import {ContractsService} from "./commons/service/contracts.service";
     HttpModule
   ],
   providers: [
-    ContractsService
+    ContractsService,
+    AddressesService,
+    PeopleService
   ],
   bootstrap: [AppComponent]
 })

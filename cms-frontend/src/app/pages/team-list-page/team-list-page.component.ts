@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ContractsService} from "../../commons/service/contracts.service";
+import {Contract} from "../../commons/model/contract.model";
 
 @Component({
   selector: 'app-team-list-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamListPageComponent implements OnInit {
 
-  constructor() { }
+  contracts: Contract[];
+
+  constructor(private contractsService: ContractsService) { }
 
   ngOnInit() {
-  }
+  this.contractsService.findAllContracts().subscribe((data: Array<Contract>) => {
+    this.contracts = data;
+  })
+}
 
 }

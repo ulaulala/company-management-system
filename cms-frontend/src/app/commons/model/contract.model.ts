@@ -1,4 +1,5 @@
 import {Person} from "./person.model";
+
 export class Contract {
 
   jobTitle: string;

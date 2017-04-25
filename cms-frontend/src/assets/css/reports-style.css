@@ -13,24 +13,25 @@ nav {
   color: rgba(171, 182, 186, 1);
   text-transform: uppercase;
 }
-nav .tab:nth-child(1) {
+a.tab:hover {
+  border-bottom: solid 4px rgba(171, 182, 186, 0.6);
+}
+a.tab:active, a.tab:link, a.tab:visited {
   color: rgba(29, 31, 49, 1);
-  border-bottom: solid 3px rgba(214, 66, 99, 1);
-  font-weight: 500;
+  text-decoration: none;
 }
 .tab {
   float: left;
   padding: calc(80px * 0.345) 15px calc(80px * 0.265) 15px;
   margin: 0 2%;
 }
-
 .report-table {
   display: flex;
   flex-direction: column;
-  width: calc(68vw-260px);
+  width: calc(82vw - 260px);
   margin: 2% 7%;
   overflow-y: auto;
-  max-height: 70vh;
+  max-height: 79.5vh;
 }
 .report-table tr {
   height: 70px;
@@ -52,6 +53,7 @@ nav .tab:nth-child(1) {
 }
 .report-table tr th, .report-table tr td {
   width: 150px;
+  margin: 0 auto;
 }
 .report-table th {
   font-family: 'Roboto';
@@ -63,9 +65,13 @@ nav .tab:nth-child(1) {
 .report-table td {
   font-family: 'Roboto';
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(16, 18, 29, 1);
   background-color: rgba(255, 255, 255, 1);
+}
+.report-table td:nth-child(1), .report-table th:nth-child(1) {
+  width: 90px;
+  margin: 0;
 }
 .table-icon {
   border-radius: 50%;
@@ -75,18 +81,31 @@ nav .tab:nth-child(1) {
   background-color: rgba(222, 68, 101, 1);
 }
 .report-table tr td:nth-last-child(1), .report-table tr th:nth-last-child(1)  {
-  display: flex;
+  display: inline-block;
   flex-direction: row;
   padding-right: 15px;
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 14px;
+  margin: 0;
   color: rgba(102, 104, 122, 1);
   text-decoration: underline;
 }
+.report-table tr td:nth-last-child(1):hover, .report-table tr td:nth-last-child(1).hover {
+  color: rgba(214, 66, 99, 1);
+  cursor: hand;
+}
 
 .details .material-icons {
+  float: left;
   font-size: 20px;
   margin: 0 10px;
   color: rgba(214, 66, 99, 1);
+}
+
+@media (max-width: 1200px) {
+  .report-table tr th, .report-table tr td {
+    font-size: 12px;
+    min-width: 70px;
+  }
 }

@@ -1,92 +1,17 @@
-header {
-  height: 70px;
-  position: absolute;
-  background-color: rgba(254, 254, 254, 1);
-}
+/*reports-style.css*/
 
-nav {
-  height: inherit;
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 16px;
-  padding: 0 3.2%;
-  color: rgba(171, 182, 186, 1);
-  text-transform: uppercase;
-}
-nav .tab:nth-child(1) {
-  color: rgba(29, 31, 49, 1);
-  border-bottom: solid 3px rgba(214, 66, 99, 1);
+a.tab:nth-child(3) {
+  color: rgba(29, 31, 49, 1) !important;
+  border-bottom: solid 4px rgba(214, 66, 99, 1) !important;
   font-weight: 500;
 }
-.tab {
-  float: left;
-  padding: calc(80px * 0.345) 15px calc(80px * 0.265) 15px;
-  margin: 0 2%;
-}
 
-.report-table {
-  display: flex;
-  flex-direction: column;
-  width: calc(68vw-260px);
-  margin: 2% 7%;
-  overflow-y: auto;
-  max-height: 70vh;
+.report-table tr td:nth-last-child(4), .report-table tr th:nth-last-child(4) {
+  width: 210px;
 }
-.report-table tr {
-  height: 70px;
-  width: auto;
-  min-width: 500px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 4px;
-  box-shadow: 0px 2px 4px 0px rgba(227, 235, 238, 1);
-  margin: 6px;
+.report-table tr td:nth-last-child(3), .report-table tr th:nth-last-child(3) {
+  width: 70px;
 }
-.report-table tr:nth-child(1) {
-  background-color: transparent;
-  box-shadow: none;
-}
-.report-table tr th, .report-table tr td {
-  width: 150px;
-}
-.report-table th {
-  font-family: 'Roboto';
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: rgba(171, 182, 186, 1);
-}
-.report-table td {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 16px;
-  color: rgba(16, 18, 29, 1);
-  background-color: rgba(255, 255, 255, 1);
-}
-.table-icon {
-  border-radius: 50%;
-  height: 34px;
-  width: 34px;
-  margin: 0 25px;
-  background-color: rgba(222, 68, 101, 1);
-}
-.report-table tr td:nth-last-child(1), .report-table tr th:nth-last-child(1)  {
-  display: flex;
-  flex-direction: row;
-  padding-right: 15px;
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 14px;
-  color: rgba(102, 104, 122, 1);
-  text-decoration: underline;
-}
-
-.details .material-icons {
-  font-size: 20px;
-  margin: 0 10px;
-  color: rgba(214, 66, 99, 1);
+.report-table tr td:nth-last-child(1), .report-table tr th:nth-last-child(1) {
+  width: 0;
 }
