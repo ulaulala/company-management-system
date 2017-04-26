@@ -4,6 +4,7 @@ import {UserProfilePageComponent} from "./pages/user-profile-page/user-profile-p
 import {TeamListPageComponent} from "./pages/team-list-page/team-list-page.component";
 import {ContractListPageComponent} from "./pages/contract-list-page/contract-list-page.component";
 import {AddressDataListPageComponent} from "./pages/address-data-list-page/address-data-list-page.component";
+import {ProjectListPageComponent} from "./pages/project-list-page/project-list-page.component";
 
 export const appRoutes: Routes = [
   {
@@ -21,6 +22,22 @@ export const appRoutes: Routes = [
   {
     path: 'addresses',
     component: AddressDataListPageComponent
+  },
+  {
+    path: 'projects',
+    component: ProjectListPageComponent
+  },
+  {
+    path: 'people',
+    component: UserProfilePageComponent
+  },
+  {
+    path: 'people/:id',
+    component: UserProfilePageComponent
+  },
+  {
+    path: 'contracts/:id',
+    component: UserProfilePageComponent
   },
   {
     path: '',

@@ -13,6 +13,9 @@ import {appRoutes} from "./app.routes";
 import {ContractsService} from "./commons/service/contracts.service";
 import {AddressesService} from "./commons/service/addresses.service";
 import {PeopleService} from "./commons/service/people.service";
+import { ProjectListPageComponent } from './pages/project-list-page/project-list-page.component';
+import {ProjectService} from "./commons/service/projects.service";
+import {UserService} from "./commons/service/user.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import {PeopleService} from "./commons/service/people.service";
     UserProfilePageComponent,
     TeamListPageComponent,
     ContractListPageComponent,
-    AddressDataListPageComponent
+    AddressDataListPageComponent,
+    ProjectListPageComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -31,7 +35,9 @@ import {PeopleService} from "./commons/service/people.service";
   providers: [
     ContractsService,
     AddressesService,
-    PeopleService
+    PeopleService,
+    ProjectService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

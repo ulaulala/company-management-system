@@ -15,8 +15,8 @@
       </td>
       <td>{{contract.person.firstName}} {{contract.person.lastName}}</td>
       <td>{{contract.salary}} zł</td>
-      <td>{{contract.startDate | date:'yyyy/MM/dd' }}</td>
-      <td>{{contract.endDate | date:'yyyy/MM/dd' }}</td>
+      <td>{{contract.startDate | date: 'dd.MM.yyyy r.' }}</td>
+      <td>{{contract.endDate | date: 'dd.MM.yyyy r.' }}</td>
       <td>
         <a href="/people/{{contract.person.id}}">
           <div class="details">

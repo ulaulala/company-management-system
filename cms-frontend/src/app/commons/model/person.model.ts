@@ -1,4 +1,5 @@
 import {Address} from "./address.model";
+import {Project} from "./project.model";
 
 export class Person {
 
@@ -7,5 +8,6 @@ export class Person {
   lastName: string;
   birthday: Date;
   address: Address;
+  projects: Project[];
 
 }
