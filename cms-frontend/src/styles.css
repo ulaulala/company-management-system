@@ -40,9 +40,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+/*::-webkit-scrollbar {*/
+  /*display: table-column-group;*/
+/*}*/
 a:active, a:link, a:visited {
   text-decoration: none;
 }

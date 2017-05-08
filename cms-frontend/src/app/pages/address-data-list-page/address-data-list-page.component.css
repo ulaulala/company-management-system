@@ -1,8 +1,8 @@
 /*reports-style.css*/
 
 a.tab:nth-child(3) {
-  color: rgba(29, 31, 49, 1) !important;
-  border-bottom: solid 4px rgba(214, 66, 99, 1) !important;
+  color: rgba(29, 31, 49, 1);
+  border-bottom: solid 4px rgba(214, 66, 99, 1);
   font-weight: 500;
 }
 
@@ -15,3 +15,60 @@ a.tab:nth-child(3) {
 .report-table tr td:nth-last-child(1), .report-table tr th:nth-last-child(1) {
   width: 0;
 }
+
+/*styles from app.content.css*/
+.top-bar {
+  height: 70px;
+}
+.right-side {
+  position: fixed;
+  width: 79.7vw;
+  right: 0;
+  min-height: 250px;
+}
+@media (max-width: 1300px) {
+  .right-side {
+    width: calc(100vw - 260px);
+  }
+}
+
+header {
+  height: 70px;
+  position: absolute;
+  background-color: rgba(254, 254, 254, 1);
+}
+
+nav {
+  height: inherit;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 3.2%;
+  color: rgba(171, 182, 186, 1);
+  text-transform: uppercase;
+}
+.tab {
+  float: left;
+  padding: calc(80px * 0.345) 15px calc(80px * 0.265) 15px;
+  margin: 0 2%;
+}
+
+/*/deep/ .menu-listing[href=""],*/
+/*/deep/ .menu-listing[href=""] .icon .material-icons,*/
+/*/deep/ .menu-listing .dropdown-icon {*/
+         /*background-color: rgba(214, 66, 99, 1);*/
+         /*color: rgba(255, 255, 255, 1);*/
+       /*}*/
+
+/*/deep/ .reports,*/
+/*/deep/ .reports .icon .material-icons,*/
+/*/deep/ a.menu-listing + .reports {*/
+  /*display: block;*/
+       /*}*/
+
+/*/deep/ .reports > a[href="/contracts"] {*/
+         /*color: rgba(255, 255, 255, 1);*/
+       /*}*/
+/*/deep/ .reports a[href="/contracts"] .icon {*/
+  /*background-color: rgba(214, 66, 99, 1);*/
+/*}*/

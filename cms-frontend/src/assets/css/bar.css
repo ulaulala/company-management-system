@@ -1,3 +1,5 @@
+aside::-webkit-scrollbar { display: none; }
+
 aside {
   width: 20.3vw;
   min-width: 260px;
@@ -6,15 +8,6 @@ aside {
   left: 0;
   background-color: rgba(29, 31, 49, 1);
   overflow-y: scroll;
-}
-a.menu-listing:hover {
-  background-color: rgba(214, 66, 99, 1);
-  color: rgba(255, 255, 255, 1);
-}
-a.menu-listing:hover .icon .material-icons, a.menu-listing.hover .icon .material-icons,
-a.menu-listing:hover .dropdown-icon, a.menu-listing.hover .dropdown-icon {
-  background-color: rgba(214, 66, 99, 1);
-  color: rgba(255, 255, 255, 1);
 }
 
 .logo {
@@ -122,4 +115,14 @@ section {
 .reports { display: none; z-index: 1;}
 .reports:hover, .reports.hover, a.menu-listing:hover + .reports, a.menu-listing.hover + .reports{
   display: block;
+}
+
+a.menu-listing:hover {
+  background-color: rgba(214, 66, 99, 1);
+  color: rgba(255, 255, 255, 1);
+}
+a.menu-listing:hover .icon .material-icons, a.menu-listing.hover .icon .material-icons,
+a.menu-listing:hover .dropdown-icon, a.menu-listing.hover .dropdown-icon {
+  background-color: rgba(214, 66, 99, 1);
+  color: rgba(255, 255, 255, 1);
 }

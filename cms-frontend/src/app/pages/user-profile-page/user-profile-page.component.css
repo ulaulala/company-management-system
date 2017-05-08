@@ -1,3 +1,17 @@
+.profile::-webkit-scrollbar { display: none; }
+
+.right-side {
+  position: fixed;
+  width: 79.7vw;
+  right: 0;
+  min-height: 250px;
+}
+@media (max-width: 1300px) {
+  .right-side {
+    width: calc(100vw - 260px);
+  }
+}
+
 section {
   height: 100vh;
 }
@@ -125,8 +139,15 @@ section {
   .right-side {
     width: calc(100vw - 260px);
   }
+
   .col1, .col2 {
     width: calc(79.7vw - 260px);
     min-width: 300px;
   }
 }
+
+/*/deep/ .menu-listing[href="/user-profile"],*/
+/*/deep/ .menu-listing[href="/user-profile"] .icon .material-icons {*/
+         /*background-color: rgba(214, 66, 99, 1);*/
+         /*color: rgba(255, 255, 255, 1);*/
+       /*}*/
