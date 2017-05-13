@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Person} from "../../commons/model/person.model";
-import {UserService} from "../../commons/service/user.service";
 import {Contract} from "../../commons/model/contract.model";
 import {ContractsService} from "../../commons/service/contracts.service";
 import {PeopleService} from "../../commons/service/people.service";
@@ -8,7 +7,7 @@ import {PeopleService} from "../../commons/service/people.service";
 @Component({
   selector: 'app-user-profile-page',
   templateUrl: './user-profile-page.component.html',
-  styleUrls: ['./user-profile-page.component.css']
+  styleUrls: ['./user-profile-page.component.scss']
 })
 export class UserProfilePageComponent implements OnInit {
 

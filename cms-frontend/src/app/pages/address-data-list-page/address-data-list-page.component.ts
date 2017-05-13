@@ -6,7 +6,7 @@ import {Person} from "../../commons/model/person.model";
 @Component({
   selector: 'app-address-data-list-page',
   templateUrl: './address-data-list-page.component.html',
-  styleUrls: ['./address-data-list-page.component.css']
+  styleUrls: ['./address-data-list-page.component.scss']
 })
 export class AddressDataListPageComponent implements OnInit {
 

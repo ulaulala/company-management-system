@@ -8,7 +8,29 @@
   </nav>
 </header>
 
+<div class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-title">Projekty osoby:  </div>
+    <table class="modal-table report-table">
+      <tr>
+        <th></th>
+        <th>Zleceniodawca</th>
+        <th>Opis</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="table-icon"></div>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
 <section class="right-side">
+
 <table class="report-table">
   <tr>
     <th></th>
@@ -26,7 +48,30 @@
     <td>{{contractOwners.person.firstName}} {{contractOwners.person.lastName}}</td>
     <td>{{contractOwners.startDate | date: 'dd.MM.yyyy r.' }}</td>
     <td>{{contractOwners.endDate | date: 'dd.MM.yyyy r.' }}</td>
-    <td><div class="details"><i class="material-icons">content_paste</i></div>Zobacz projekty</td>
+    <td class="CLICK"><div class="details"><i class="material-icons">content_paste</i></div>Zobacz projekty</td>
+
   </tr>
 </table>
 </section>
+
+<script>
+  var modal = document.getElementsByClassName("modal")[0];
+
+  var btn = document.getElementsByClassName("CLICK")[1];
+
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>

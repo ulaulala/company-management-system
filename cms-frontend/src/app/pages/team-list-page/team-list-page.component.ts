@@ -5,7 +5,7 @@ import {Contract} from "../../commons/model/contract.model";
 @Component({
   selector: 'app-team-list-page',
   templateUrl: './team-list-page.component.html',
-  styleUrls: ['./team-list-page.component.css']
+  styleUrls: ['./team-list-page.component.scss']
 })
 export class TeamListPageComponent implements OnInit {
 

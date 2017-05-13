@@ -1,19 +1,9 @@
 /*reports-style.css*/
 
-a.tab:nth-child(1) {
+a.tab:nth-child(2) {
   color: rgba(29, 31, 49, 1);
   border-bottom: solid 4px rgba(214, 66, 99, 1);
   font-weight: 500;
-}
-
-.report-table tr td:nth-child(2), .report-table tr th:nth-child(2) {
-  width: 200px;
-}
-.report-table tr td:nth-child(4), .report-table tr th:nth-child(4), .report-table tr td:nth-child(5), .report-table tr th:nth-child(5) {
-  width: 100px;
-}
-.report-table tr td:nth-child(6), .report-table tr th:nth-child(6) {
-  width: 170px;
 }
 
 /*styles from app.content.css*/
@@ -53,9 +43,15 @@ nav {
   margin: 0 2%;
 }
 
-/*/deep/ .menu-listing[href=""],*/
-/*/deep/ .menu-listing[href=""] .icon .material-icons,*/
-/*/deep/ .menu-listing .dropdown-icon {*/
-         /*background-color: rgba(214, 66, 99, 1);*/
-         /*color: rgba(255, 255, 255, 1);*/
-       /*}*/
+/deep/ .menu-listing[href=""],
+/deep/ .menu-listing[href=""] .icon .material-icons,
+/deep/ .menu-listing .dropdown-icon {
+         background-color: rgba(214, 66, 99, 1);
+         color: rgba(255, 255, 255, 1);
+       }
+
+/deep/ .reports,
+/deep/ .reports .icon .material-icons,
+/deep/ a.menu-listing + .reports {
+  display: block;
+}

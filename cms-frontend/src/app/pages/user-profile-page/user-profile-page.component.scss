@@ -146,8 +146,8 @@ section {
   }
 }
 
-/*/deep/ .menu-listing[href="/user-profile"],*/
-/*/deep/ .menu-listing[href="/user-profile"] .icon .material-icons {*/
-         /*background-color: rgba(214, 66, 99, 1);*/
-         /*color: rgba(255, 255, 255, 1);*/
-       /*}*/
+/deep/ .menu-listing[href="/user-profile"],
+/deep/ .menu-listing[href="/user-profile"] .icon .material-icons {
+         background-color: rgba(214, 66, 99, 1);
+         color: rgba(255, 255, 255, 1);
+       }

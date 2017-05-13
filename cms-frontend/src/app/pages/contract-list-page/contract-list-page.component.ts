@@ -5,7 +5,7 @@ import {ContractsService} from "../../commons/service/contracts.service";
 @Component({
   selector: 'app-contract-list-page',
   templateUrl: './contract-list-page.component.html',
-  styleUrls: ['./contract-list-page.component.css']
+  styleUrls: ['./contract-list-page.component.scss']
 })
 export class ContractListPageComponent implements OnInit {
 
