@@ -6,7 +6,7 @@
   z-index: 1;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.02);
 }
 .modal-content {
   background-color: rgba(245, 248, 249, 1);
@@ -30,12 +30,46 @@
   cursor: pointer;
 }
 
+.project {
+  height: 90px;
+  width: auto;
+  border: 2px solid rgba(226, 231, 232, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 6px 42px;
+  align-self: stretch;
+  padding-left: 5px;
+}
+.table-icon {
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  margin: 0 25px;
+  background-color: rgba(222, 68, 101, 1);
+}
+.project-title { margin: 0;}
+.project-principal {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(214, 66, 99, 1);
+}
+.project-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(44, 46, 62, 1);
+}
+
+
 .modal-title {
   height: 29px;
   font-weight: 600;
   font-size: 22px;
   color:  rgba(68, 75, 78, 1);
-  margin:  31px 0 0 35px;
+  margin:  31px 0 25px 35px;
 }
 .modal-table {
   width: calc(100% - 2*35px);

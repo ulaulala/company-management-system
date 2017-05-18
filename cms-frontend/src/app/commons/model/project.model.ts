@@ -9,6 +9,5 @@ export class Project {
   startDate: Date;
   endDate: Date;
   description: string;
-
-  //team: Set<Person>;
+  people: Person[];
 }

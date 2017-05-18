@@ -11,7 +11,7 @@ export class ProjectService {
   }
 
   findAllProjects(): Observable<Array<Project>> {
-    return this.http.get('/api/projects')
+    return this.http.get('/api/projects/people')
       .map((response: Response) => response.json())
       .map((data: Array<Project>) => {
         return data;
@@ -19,7 +19,7 @@ export class ProjectService {
   }
 
   findProject(id: number): Observable<Project> {
-    return this.http.get('/api/projects/'+ id)
+    return this.http.get('/api/projects/'+ id + '/people')
       .map((response: Response) => response.json())
       .map((data: Project) => {
         return data;

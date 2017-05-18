@@ -17,6 +17,8 @@ export class TeamListPageComponent implements OnInit {
   this.contractsService.findAllContracts().subscribe((data: Array<Contract>) => {
     this.contracts = data;
   })
+
+
 }
 
 }
