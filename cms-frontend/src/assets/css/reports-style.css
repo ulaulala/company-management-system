@@ -63,7 +63,7 @@ a.tab:active, a.tab:link, a.tab:visited {
   color: rgba(171, 182, 186, 1);
 }
 .report-table td {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: rgba(16, 18, 29, 1);
@@ -84,7 +84,7 @@ a.tab:active, a.tab:link, a.tab:visited {
   display: inline-block;
   flex-direction: row;
   padding-right: 15px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
   margin: 0;
