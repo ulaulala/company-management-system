@@ -16,6 +16,8 @@ import {PeopleService} from "./commons/service/people.service";
 import { ProjectListPageComponent } from './pages/project-list-page/project-list-page.component';
 import {ProjectService} from "./commons/service/projects.service";
 import {UserService} from "./commons/service/user.service";
+import {ProjectTeamListPageComponent} from "./pages/project-team-list-page/project-team-list-page.component";
+import {PersonProjectsListPageComponent} from "./pages/person-projects-list-page/person-projects-list-page.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {UserService} from "./commons/service/user.service";
     TeamListPageComponent,
     ContractListPageComponent,
     AddressDataListPageComponent,
-    ProjectListPageComponent
+    ProjectListPageComponent,
+    ProjectTeamListPageComponent,
+    PersonProjectsListPageComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -1,5 +1,3 @@
-<script src="team-list-page.component.ts"></script>
-
 <header class="top-bar right-side">
   <nav>
     <a href="/teams" class="tab">Zespół</a>
@@ -31,23 +29,10 @@
       <div class="details">
         <i class="material-icons">content_paste</i>
       </div>
-      Zobacz projekty
-
-      <div class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="modal-title">Projekty ({{contractOwners.person.firstName}} {{contractOwners.person.lastName}}) </div>
-          <div class="project" *ngFor="let projects of contractOwners.person.projects">
-            <div class="table-icon"></div>
-            <div>
-              <div class="project-title">{{projects.title}}</div>
-              <div class="project-principal">{{projects.principal}}</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a (click)="goToListOfProjects(contractOwners.person.id)">
+        Zobacz projekty
+      </a>
     </td>
-
   </tr>
 </table>
 </section>

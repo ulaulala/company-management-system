@@ -1,0 +1,26 @@
+<header class="top-bar right-side">
+  <nav>
+    <a href="/projects" class="tab">Projekty</a>
+    <a href="/projects/people" class="tab">Zespół projektowy</a>
+  </nav>
+</header>
+
+<section class="right-side">
+  <div class="modal-title">Zespół projektu {{project.title}} dla {{project.principal}} </div>
+  <table class="report-table">
+    <tr>
+      <th></th>
+      <th>Stanowisko</th>
+      <th>Imię i Nazwisko</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let team of project.people">
+      <td>
+        <div class="table-icon"></div>
+      </td>
+      <td *ngIf="contracts[team.id]">{{contracts[team.id].jobTitle}}</td>
+      <td>{{team.firstName}} {{team.lastName}}</td>
+      <td></td>
+    </tr>
+  </table>
+</section>

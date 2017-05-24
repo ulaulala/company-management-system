@@ -1,0 +1,19 @@
+<header class="top-bar right-side">
+  <nav>
+    <a href="/teams" class="tab">Zespół</a>
+    <a href="/" class="tab">Projekty pracownika</a>
+  </nav>
+</header>
+
+<section class="right-side">
+  <div *ngIf="person" class="modal-title">Projekty {{person.firstName}} {{person.lastName}} </div>
+  <table class="report-table">
+    <div class="project" *ngFor="let projects of person.projects">
+      <div class="table-icon"></div>
+      <div>
+        <div class="project-title">{{projects.description}}</div>
+        <div class="project-principal">{{projects.principal}}</div>
+      </div>
+    </div>
+  </table>
+</section>
