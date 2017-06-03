@@ -53,8 +53,8 @@ nav {
   margin: 0 2%;
 }
 
-/deep/ .menu-listing[routerLink=""],
-/deep/ .menu-listing[routerLink=""] .icon .material-icons,
+/deep/ .menu-listing[href=""],
+/deep/ .menu-listing[href=""] .icon .material-icons,
 /deep/ .menu-listing .dropdown-icon {
          background-color: rgba(214, 66, 99, 1);
          color: rgba(255, 255, 255, 1);
