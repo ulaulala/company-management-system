@@ -110,3 +110,12 @@ a.tab:active, a.tab:link, a.tab:visited {
   }
 }
 
+input.form-control {
+  color: rgba(171, 182, 186, 0.7);
+  letter-spacing: 0.04em;
+  font-size: 14px;
+}
+input.form-control#inputTopLimit, input.form-control#inputBottomLimit{
+  width: 50%;
+  float: left;
+}

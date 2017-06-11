@@ -5,7 +5,9 @@ a.tab:nth-child(2) {
   border-bottom: solid 4px rgba(214, 66, 99, 1);
   font-weight: 500;
 }
-
+.report-table tr td:nth-child(2), .report-table tr th:nth-child(2) {
+  width: 200px;
+}
 /*styles from app.content.css*/
 .top-bar {
   height: 70px;

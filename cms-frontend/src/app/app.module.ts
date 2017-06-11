@@ -18,6 +18,11 @@ import {ProjectService} from "./commons/service/projects.service";
 import {UserService} from "./commons/service/user.service";
 import {ProjectTeamListPageComponent} from "./pages/project-team-list-page/project-team-list-page.component";
 import {PersonProjectsListPageComponent} from "./pages/person-projects-list-page/person-projects-list-page.component";
+import {JobTitleFilter} from "./pages/pipes/job-title-filter";
+import {NameFilter} from "./pages/pipes/name-filter";
+import {BottomNumberLimitFilter} from "./pages/pipes/bottom-number-limit-filter";
+import {TopNumberLimitFilter} from "./pages/pipes/top-number-limit-filter";
+import {CityFilter} from "./pages/pipes/city-filter";
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import {PersonProjectsListPageComponent} from "./pages/person-projects-list-page
     AddressDataListPageComponent,
     ProjectListPageComponent,
     ProjectTeamListPageComponent,
-    PersonProjectsListPageComponent
+    PersonProjectsListPageComponent,
+    JobTitleFilter,
+    NameFilter,
+    BottomNumberLimitFilter,
+    TopNumberLimitFilter,
+    CityFilter
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

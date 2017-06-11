@@ -16,7 +16,15 @@
     <th>Miasto</th>
     <th></th>
   </tr>
-  <tr *ngFor="let addressOwner of people">
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th><input type="text" id="inputCity" class="form-control" placeholder="miasto" [(ngModel)]="city"></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let addressOwner of people | CityFilter:city">
     <td>
       <div class="table-icon"></div>
     </td>

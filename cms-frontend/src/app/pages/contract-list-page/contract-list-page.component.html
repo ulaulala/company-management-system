@@ -16,7 +16,18 @@
       <th>Do</th>
       <th></th>
     </tr>
-    <tr *ngFor="let contract of contracts">
+    <tr>
+      <th></th>
+      <th><input type="text" id="inputName" class="form-control" placeholder="imię i/lub nazwisko" [(ngModel)]="firstOrLastName"></th>
+      <th>
+        <input type="number" id="inputBottomLimit" class="form-control" placeholder="od" [(ngModel)]="bottomLimit">
+        <input type="number" id="inputTopLimit" class="form-control" placeholder="do" [(ngModel)]="topLimit">
+      </th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let contract of contracts | NameFilter:firstOrLastName | TopNumberLimitFilter:topLimit | BottomNumberLimitFilter:bottomLimit">
       <td>
         <div class="table-icon"></div>
       </td>
