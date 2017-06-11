@@ -7,7 +7,6 @@ import {Contract} from "../../commons/model/contract.model";
 @Injectable()
 export class JobTitleFilter implements PipeTransform {
   transform(contracts: Contract[], args: string): any {
-    if (!JobTitleFilter) return true;
-    return contracts.filter(contract => contract.jobTitle.toLowerCase().indexOf(args.toLowerCase()) !== -1);
+    if (contracts || args) return contracts.filter(contract => contract.jobTitle.toLowerCase().indexOf(args.toLowerCase()) !== -1);
   }
 }
